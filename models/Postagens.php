@@ -44,7 +44,7 @@ class Postagens extends Model {
         (select usuarios.nome FROM usuarios WHERE usuarios.id = posts.id_usuario) as nome,
         (select count(*) FROM posts_likes WHERE posts_likes.id_post = posts.id) as likes,
         (select count(*) FROM posts_likes WHERE posts_likes.id_post = posts.id and 
-        posts_likes.id_usuario = '".$_SESSION['Login']."') as liked
+        posts_likes.id_usuario = '".($_SESSION['Login'])."') as liked
         FROM posts
         WHERE id_usuario IN (".implode(',',$ids).") 
         ORDER BY data_criacao DESC");
@@ -73,7 +73,7 @@ class Postagens extends Model {
     }
 
     public function isLiked($id, $id_usuario) {
-        $sql = ("SELECT * FROM posts_likes WHERE id_post = '$id' AND id_usuario = '$id_usuario'");
+        $sql = "SELECT * FROM posts_likes WHERE id_post = '$id' AND id_usuario = '$id_usuario'";
         $sql = $this->db->query($sql);
 
         if($sql->rowCount() > 0) {
@@ -84,13 +84,11 @@ class Postagens extends Model {
     }
 
     public function removeLike($id, $id_usuario) {
-        $sql = ("DELETE FROM posts_likes WHERE id_post = '$id' AND id_usuario = '$id_usuario'");
-        $sql = $this->db->query($sql);
+       $this->db->query("DELETE FROM posts_likes WHERE id_post = '$id' AND id_usuario = '$id_usuario'");
     }
 
     public function addLike($id, $id_usuario) {
-        $sql = ("INSERT INTO posts_likes SET id_post = '$id' AND id_usuario = '$id_usuario'");
-        $sql = $this->db->query($sql);
+        $this->db->query("INSERT INTO posts_likes SET id_post = '$id', id_usuario = '$id_usuario'");
     }
 
 

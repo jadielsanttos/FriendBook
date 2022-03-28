@@ -20,6 +20,15 @@ section #link-logo {
     font-size: 20px;
     font-weight: bold;
 }
+.logo form input {
+    outline: 0;
+    padding: 5px 10px;
+}
+.logo form .btn-busca {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    background-color: #fff;
+}
 
 #widget-single {
     padding: 20px 10px;
@@ -71,4 +80,30 @@ section #link-logo {
 
 .postItem-comentario {
     display: none;
+}
+
+.area-comentarios {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.area-comentarios ul li {
+    list-style: none;
+    background-color: #eee;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.area-comentarios li {
+    color: #444;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+
+.area-comentarios span {
+    color: #999;
+    font-size: 14px
 }

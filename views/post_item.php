@@ -20,13 +20,20 @@
             <button class="btn btn-primary" data-id="<?php echo $id; ?>" onclick="comentar(this)">Enviar</button>
         </div>
     </div>
+
+    <div class="qtd-comentario">
+
+    </div>
     
     <?php if($comentarios != null): ?>
     <div class="area-comentarios">
+        <h5>Comentários:</h5>
         <ul>
             <?php foreach($comentarios as $comentario): ?>
                 <li>
-                    <?php echo $comentario['nome'].": ".$comentario['texto']; ?>
+                    <strong><?php echo $comentario['nome']; ?></strong><br>
+                    <span>Publicado em <?php echo $comentario['data_criacao']; ?></span><br>
+                    <?php echo $comentario['texto']; ?>
                 </li> 
             <?php endforeach; ?>
         </ul>

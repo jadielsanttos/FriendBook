@@ -14,6 +14,13 @@
 			<div class="container">
 				<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
 				<a href="<?php echo BASE_URL; ?>" id="link-logo">FriendBook</a>
+				
+				<div class="logo">
+					<form action="<?php echo BASE_URL; ?>busca" method="GET">
+						<input type="text" name="q" placeholder="Procurar amigo...">
+						<button type="submit" class="btn-busca">Buscar</button>
+					</form>
+				</div>
 
 			
 				<div class="col-md-3 text-end">

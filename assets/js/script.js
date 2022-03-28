@@ -42,7 +42,7 @@ function curtir(obj) {
     $(obj).attr('data-likes', likes);
     $(obj).attr('data-liked', liked);
 
-    $(obj).html('('+likes+')'+texto);
+    $(obj).html('('+likes+') '+texto);
 
     
     $.ajax({

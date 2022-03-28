@@ -20,6 +20,11 @@
 
     </div>
     <div class="col-sm-4">
+        <div class="widget">
+           <h4>Total de amigos</h4>
+           <?php echo $total_amigos; ?> amigo<?php echo ($total_amigos == '1'?'':'s'); ?>
+        </div>
+
         <?php if(count($solicitacoes) > 0): ?>
         <div class="widget" id="widget-single">
            <h4>Solicitações de amizades</h4>
@@ -32,10 +37,6 @@
         </div>
         <?php endif; ?>
 
-        <div class="widget">
-           <h4>Total de amigos</h4>
-           <?php echo $total_amigos; ?> amigo<?php echo ($total_amigos == '1'?'':'s'); ?>
-        </div>
 
         <?php if(count($sugestoes) > 0): ?>
         <div class="widget">

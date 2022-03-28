@@ -65,4 +65,5 @@ class Relacionamentos extends Model {
 
     }
 
+
 }
