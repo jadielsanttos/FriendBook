@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html, body {
@@ -11,7 +11,7 @@ html, body {
 }
 
 section {
-    background-color: #212529;
+    background-color: #170d5c;
 }
 
 section #link-logo {
@@ -19,4 +19,189 @@ section #link-logo {
     color: #fff;
     font-size: 20px;
     font-weight: bold;
+}
+
+section .menu-opener {
+    display: none;
+}
+
+section .menu-mobile {
+    display: none;
+}
+
+section .menu .btn-entrar {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    margin-right: 10px;
+}
+section .menu .btn-entrar:hover {
+    color: #ccc;
+}
+
+section .menu .btn-cadastrar {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 5px 20px;
+    font-size: 18px;
+}
+
+section .menu .btn-cadastrar:hover {
+    background-color: rgba(0, 0, 0, 0.692);
+    color: #fff;
+}
+
+/*inicio sessão login welcome*/
+
+#body-login {
+    background-image: url(../images/images-estaticas/networking3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-login h1 {
+    text-align: center;
+    margin-top: 13%;
+    font-weight: 600;
+    font-size: 50px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container-login a {
+    text-decoration: none;
+    background-color: #170d5c;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size: 18px;
+    transition: all ease .3s;
+}
+
+.container-login a:hover {
+    background-color: #110a42;
+    color: #fff;
+}
+
+
+/*inicio sessão login/entrar e login/cadastrar*/
+#body-forms {
+    background-color: #eee;
+}
+
+#container-login-entrar h1,
+#container-login-cadastrar h1  {
+    margin-bottom: 20px;
+}
+
+#container-login-entrar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#container-login-entrar input,
+#container-login-cadastrar input[type="email"], input[type="text"], input[type="password"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    outline: 0;
+    margin: 10px 0;
+}
+
+#container-login-entrar .btn-logar,
+#container-login-cadastrar .btn-Registrar {
+    border: 1px solid #ccc;
+    background-color: #170d5c;
+    color: #fff;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#container-login-entrar .btn-logar:hover,
+#container-login-cadastrar .btn-Registrar:hover {
+    background-color: #110a42;
+}
+
+#container-login-cadastrar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/*inicio sessão media queries*/
+
+@media screen and (max-width: 768px) {
+    section .menu {
+        display: none;
+    }
+    section .menu-opener {
+        display: block;
+        color: #fff;
+        font-size: 25px;
+    }
+    section .menu-mobile {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        z-index: 99;
+        width: 50vw;
+        height: 100px;
+        background-color: #2d284e;
+    }
+    section .menu-mobile ul li {
+        list-style: none;
+    }
+    section .menu-mobile ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        line-height: 40px;
+    }
+    section .menu-mobile ul li a:hover {
+        color: #ccc;
+    }
+}
+@media screen and (max-width: 767px) {
+    section .menu-opener {
+        margin-left: 300px;
+    }
+    .container-login {
+        margin-top: 20%;
+    }
+}
+@media screen and (max-width: 470px) {
+    section .menu-opener {
+        margin-left: 200px;
+    }
+    .container-login {
+        margin-top: 20%;
+    }
+    .container-login h1 {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .container-login h1 {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 375px) {
+    section .menu-opener {
+        margin-left: 100px;
+    }
 }

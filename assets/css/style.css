@@ -13,6 +13,17 @@ html, body {
 
 /*inicio sessão menu*/
 
+.menu-opener {
+    display: none;
+}
+
+.menu-mobile {
+    display: none;
+}
+.menu-mobile ul {
+    display: flex;
+}
+
 section {
     background-color: #170d5c;
 }
@@ -32,12 +43,17 @@ section .btn-group #btn-dropdown {
     font-size: 17px;
 }
 
+.logo {
+    display: flex;
+}
+
 .logo form input {
     width: 250px;
     outline: 0;
     padding: 5px 10px;
     border-radius: 50px;
     border: 0;
+    margin-left: 20px;
 }
 .logo form input:focus {
     width: 300px;
@@ -232,3 +248,118 @@ section .btn-group #btn-dropdown {
     font-size: 14px
 }
 
+/*inicio sessão de perfil do usuário*/
+
+.session-perfil h2 {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.session-perfil {
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.form-perfil input, textarea {
+    margin: 10px 0;
+    width: 100%;
+    outline: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.form-perfil #box-email, .radio {
+    margin: 10px 0;
+}
+
+.form-perfil button {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #211766;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 17px;
+    transition: .3s;
+}
+
+.form-perfil button:hover {
+    background-color: #170d5c;
+}
+
+
+/*inicio sessão media queries*/
+
+@media screen and (max-width: 768px) {
+    /*header*/
+    #menu {
+        display: none;
+    }
+    .menu-opener {
+        display: block;
+        color: #fff;
+        font-size: 25px;
+    }
+    .menu-mobile {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        z-index: 99;
+        width: 50vw;
+        height: 100px;
+        background-color: #2d284e;
+    }
+    .menu-mobile ul {
+        flex-direction: column;
+    }
+    .menu-mobile ul li {
+        list-style: none;
+    }
+    .menu-mobile ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        line-height: 40px;
+    }
+    .menu-mobile ul li a:hover {
+        color: #ccc;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .logo {
+        flex-direction: column;
+    }
+    .logo form input {
+        margin: 0;
+    }
+    .logo form input:focus {
+        width: 250px;
+    }
+    .logo a {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .menu-mobile {
+        top: 106px;
+    }
+    .menu-opener {
+       margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .menu-opener {
+        margin-left: 50px;
+     }
+     .logo form input {
+        width: 200px;
+    }
+    .logo form input:focus {
+        width: 200px;
+    }
+}

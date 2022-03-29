@@ -14,17 +14,20 @@
 		<section>
 			<div class="container">
 				<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
-				<a href="<?php echo BASE_URL; ?>" id="link-logo">FriendBook</a>
 				
 				<div class="logo">
+					<a href="<?php echo BASE_URL; ?>" id="link-logo">FriendBook</a>
 					<form action="<?php echo BASE_URL; ?>busca" method="GET">
 						<input type="text" name="q" placeholder="Procurar amigo...">
 					</form>
 				</div>
-
 			
 				<div class="col-md-3 text-end">
-					<div class="btn-group">
+					<div class="menu-opener" id="menu-opener">
+						<i class="fa-solid fa-bars" onclick="abrirMenu()"></i>
+					</div>
+
+					<div class="btn-group" id="menu">
 						<button type="button" id="btn-dropdown" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 							<?php echo $viewData['usuario_nome']; ?>
 						</button>
@@ -33,7 +36,18 @@
 							<li><a class="dropdown-item" href="<?php echo BASE_URL; ?>login/sair">Sair</a></li>
 						</ul>
 					</div>
+
 				</div>
+
+
+				<div class="menu-mobile" id="menu-mobile"> 
+					<ul>
+						<li><a href="<?php echo BASE_URL; ?>perfil">Editar perfil</a></li>
+						<li><a href="<?php echo BASE_URL; ?>login/sair">Sair</a></li>
+					</ul>
+				</div>
+
+					
 				</header>
 			</div>
 		</section>

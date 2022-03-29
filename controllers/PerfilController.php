@@ -8,11 +8,13 @@ class PerfilController extends Controller {
     }
 
     public function index() {
+        $_SESSION['msg'] = '';
         $data = array(
             'usuario_nome'=>''
         );
 
         $u = new Usuarios();
+
 
         if(isset($_POST['nome']) && !empty($_POST['nome'])) {
             $nome = addslashes($_POST['nome']);

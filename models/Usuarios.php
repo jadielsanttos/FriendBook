@@ -22,7 +22,7 @@ class Usuarios extends Model {
             header('location: '.BASE_URL);
 
         }else {
-            return "Email e/ou Senha errados!";
+            return "email e/ou senha incorretos";
         }
 
     }
@@ -33,7 +33,7 @@ class Usuarios extends Model {
         $sql = $this->db->query($sql);
 
         if($sql->rowCount() > 0) {
-            return "email já cadastrado!";
+            return "email já cadastrado";
 
         }else {
 
@@ -89,6 +89,7 @@ class Usuarios extends Model {
             $sql .= " WHERE id = '".($_SESSION['Login'])."'";
 
             $this->db->query($sql);
+            $_SESSION['msg'] = "alteração feita com sucesso!";
         }
 
     }
