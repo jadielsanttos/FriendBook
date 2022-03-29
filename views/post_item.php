@@ -1,6 +1,8 @@
 <div class="post-item">
     <div class="postItem-info">
         <strong><?php echo $nome; ?></strong><span> Fez uma publicação...</span>
+        <p>Publicado em <?php echo $data_criacao; ?></p>
+        <hr>
     </div>
 
     <div class="postItem-texto">
@@ -16,14 +18,15 @@
         <button class="btn-comment" onclick="displayComentario(this)">Comentar</button><br><br>
 
         <div class="postItem-comentario">
-            <input type="text" class="postItem-txt form-control"><br>
-            <button class="btn btn-primary" data-id="<?php echo $id; ?>" onclick="comentar(this)">Enviar</button>
+            <input type="text" class="postItem-txt" placeholder="Inserir comentário..."><br>
+            <button class="btn-enviar-comentario" data-id="<?php echo $id; ?>" onclick="comentar(this)">Enviar</button>
         </div>
     </div>
 
     <div class="qtd-comentario">
-
+        
     </div>
+
     
     <?php if($comentarios != null): ?>
     <div class="area-comentarios">
@@ -32,7 +35,7 @@
             <?php foreach($comentarios as $comentario): ?>
                 <li>
                     <strong><?php echo $comentario['nome']; ?></strong><br>
-                    <span>Publicado em <?php echo $comentario['data_criacao']; ?></span><br>
+                    <span><?php echo $comentario['data_criacao']; ?></span><br>
                     <?php echo $comentario['texto']; ?>
                 </li> 
             <?php endforeach; ?>

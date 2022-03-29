@@ -55,6 +55,7 @@ function curtir(obj) {
 function displayComentario(obj) {
     //console.log('ok');
     $(obj).closest('.postItem-botoes').find('.postItem-comentario').show();
+
 }   
 
 function comentar(obj) {
@@ -69,3 +70,4 @@ function comentar(obj) {
 
     });
 }
+

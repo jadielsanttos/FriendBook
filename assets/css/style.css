@@ -2,16 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html, body {
     width: 100%;
     height: 100vh;
+    background-color: #eee;
 }
 
+/*inicio sessão menu*/
+
 section {
-    background-color: #212529;
+    background-color: #170d5c;
 }
 
 section #link-logo {
@@ -20,18 +23,68 @@ section #link-logo {
     font-size: 20px;
     font-weight: bold;
 }
-.logo form input {
-    outline: 0;
-    padding: 5px 10px;
-}
-.logo form .btn-busca {
+
+section .btn-group #btn-dropdown {
+    background-color: #fff;
     border: 1px solid #ccc;
     padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.logo form input {
+    width: 250px;
+    outline: 0;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 0;
+}
+.logo form input:focus {
+    width: 300px;
+    background-color: #eee;
+}
+
+.logo form .btn-busca {
+    border: 0;
+    padding: 5px 10px;
     background-color: #fff;
+    border-radius: 5px;
+}
+
+/*inicio sessão busca*/ 
+
+#item-busca button {
+    color: #211766;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+#item-busca button:hover {
+    background-color: #211766;
+    color: #fff;
+}
+
+.h2-busca {
+    color: #211766;
+}
+
+/*inicio sessão coluna da direita*/
+
+.widget .h4-amigos {
+    color: rgb(65, 65, 65);
+}
+.widget .h4-amigos i {
+    color: #211766;
+}
+.widget .h4-solicitacoes {
+    color: #041d07;
+}
+.widget .h4-sugestoes {
+    color: #211766;
 }
 
 #widget-single {
-    padding: 20px 10px;
+    padding: 20px 20px;
     border-radius: 5px;
 }
 
@@ -39,31 +92,81 @@ section #link-logo {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px;
+    background-color: #fff;
 }
+
+.widget .btn-solicitacoes {
+    background-color: #fff;
+    color: #170d5c;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.widget .btn-solicitacoes:hover {
+    background-color: #170d5c;
+    color: #fff;
+}
+
 
 .sugestao-item, .solicitacao-item {
     height: 40px;
     line-height: 40px;
 }
 
-
-.post-area input {
-   margin: 20px 0;
-}
+/*inicio sessão de fazer publicação*/
 
 .post-area {
-    border-bottom: 1px solid #ccc;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #fff;
 }
+
+.post-area h4 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.post-area textarea, input[type="file"] {
+    width: 100%;
+    outline: 0;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.post-area .enviar-post {
+   margin: 10px 0;
+   border: 1px solid #ccc;
+   padding: 5px 10px;
+   border-radius: 5px;
+   font-size: 15px;
+   transition: .3s;
+}
+
+.post-area .enviar-post:hover {
+    background-color: #170d5c;
+    color: #fff;
+}
+
+
+
+/*inicio sessão de publicações*/
 
 .post-item {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #fff;
 }
 
-.postItem-Texto {
-    background-color: #eee;
-    padding: 10px;
+.postItem-info p {
+    color: #999;
+    font-size: 14px
 }
 
 .postItem-botoes {
@@ -80,6 +183,27 @@ section #link-logo {
 
 .postItem-comentario {
     display: none;
+}
+
+.postItem-comentario input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: 0;
+    border: 1px solid #ccc;
+}
+
+.postItem-comentario button {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 20px;
+    background-color: #211766;
+    color: #fff;
+}
+.postItem-comentario button:hover {
+    background-color: #170d5c;
 }
 
 .area-comentarios {
@@ -107,3 +231,4 @@ section #link-logo {
     color: #999;
     font-size: 14px
 }
+
