@@ -8,6 +8,7 @@ class BuscaController extends Controller {
     }
 
     public function index() {
+        $_SESSION['erro_busca'] = '';
         $u = new Usuarios();
         $id = $_SESSION['Login'];
         $data = array(

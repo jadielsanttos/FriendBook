@@ -138,12 +138,12 @@ class Usuarios extends Model {
 
         if($sql->rowCount() > 0) {
             $array = $sql->fetchAll();
+
+        }else {
+           $_SESSION['erro_busca'] = 'Nenhum resultado encontrado...';
         }
 
         return $array;
-
     }
-
-           
-
+      
 }
