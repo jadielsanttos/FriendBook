@@ -222,6 +222,12 @@ section .btn-group #btn-dropdown {
     background-color: #170d5c;
 }
 
+.show-comentario span {
+    color: #888;
+    font-size: 18px;
+    cursor: pointer;
+}
+
 .area-comentarios {
     padding: 20px;
     border: 1px solid #ccc;

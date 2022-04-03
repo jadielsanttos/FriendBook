@@ -1,7 +1,7 @@
 <div class="post-item">
     <div class="postItem-info">
         <strong><?php echo $nome; ?></strong><span> Fez uma publicação...</span>
-        <p>Publicado em <?php echo $data_criacao; ?></p>
+        <p>Publicado em <?php echo date('d/m/Y H:i:s', strtotime($data_criacao)); ?></p>
         <hr>
     </div>
 
@@ -22,11 +22,7 @@
             <button class="btn-enviar-comentario" data-id="<?php echo $id; ?>" onclick="comentar(this)">Enviar</button>
         </div>
     </div>
-
-    <div class="qtd-comentario">
-        
-    </div>
-
+    
     
     <?php if($comentarios != null): ?>
     <div class="area-comentarios">
@@ -35,7 +31,7 @@
             <?php foreach($comentarios as $comentario): ?>
                 <li>
                     <strong><?php echo $comentario['nome']; ?></strong><br>
-                    <span><?php echo $comentario['data_criacao']; ?></span><br>
+                    <span><?php echo date('d/m/Y H:i:s', strtotime($comentario['data_criacao'])); ?></span><br>
                     <?php echo $comentario['texto']; ?>
                 </li> 
             <?php endforeach; ?>

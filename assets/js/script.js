@@ -54,7 +54,15 @@ function curtir(obj) {
 
 function displayComentario(obj) {
     //console.log('ok');
-    $(obj).closest('.postItem-botoes').find('.postItem-comentario').show();
+    //$(obj).closest('.postItem-botoes').find('.postItem-comentario').show();
+    
+    var area_comentario = document.querySelector('.postItem-comentario');
+
+    if(area_comentario.style.display == 'block') {
+        area_comentario.style.display = 'none';
+    }else {
+        area_comentario.style.display = 'block';
+    }
 
 }   
 
@@ -69,7 +77,10 @@ function comentar(obj) {
         data:{id:id, txt:txt}
 
     });
+
+    window.location.reload();
 }
+
 
 function abrirMenu() {
     //console.log('ok');
